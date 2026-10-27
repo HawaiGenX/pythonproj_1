@@ -6,5 +6,10 @@ account = {
 }
 
 print(f"Welcome {account['Account Holder']}!, how can we help you today?")
+deposit = float(input("Enter amout you want to deposit: "))
+current_balance = account["balance"]
+current_balance+=deposit
+account["balance"] = current_balance
+
 
 
