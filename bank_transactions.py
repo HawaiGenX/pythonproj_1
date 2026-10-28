@@ -1,4 +1,3 @@
-import random
 account = {
     "Account Holder": "Jahim Edwards",
     "Accout type": "Checking",
