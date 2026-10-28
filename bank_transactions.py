@@ -14,7 +14,7 @@ if service == "deposit":
     account["balance"] += deposit
     account["last transaction"] = f"deposit of ${deposit:,.2f}"
     print(f"Deposited amount is:${deposit:,.2f} and your balance is:${account['balance']:,.2f}")
-elif service == "withrawal":
+elif service == "withdrawal":
     withdrawal = float(input("Enter amount you want to withdraw"))
     account["balance"] -= withdrawal
     account["last transaction"] = f"withrawal of ${withdrawal:,.2f}"
