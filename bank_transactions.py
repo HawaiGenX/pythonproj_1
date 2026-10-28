@@ -5,7 +5,7 @@ account = {
     "balance": 250000.00,
     "last transaction": "none"
 }
-
+print("\n")
 print(f"Welcome {account['Account Holder']}!, how can we help you today?")
 
 service = input("Choose service (deposit, withdrawal, balance): ")
@@ -26,7 +26,13 @@ elif service == "withdrawal":
 elif service == "balance":
     print(f"Your current balance is: ${account['balance']:,.2f}")
     
-        
+else:
+    print("Invalid service. Please choose deposit, withdrawal, or balance")
+
+print("\n")
+for key,value in account.items():
+    print(f"{key.replace('-', ' ').title()}: {value}")
+print("\n")          
     
 
 
