@@ -15,11 +15,13 @@ if service == "deposit":
     account["last transaction"] = f"deposit of ${deposit:,.2f}"
     print(f"Deposited amount is:${deposit:,.2f} and your balance is:${account['balance']:,.2f}")
 elif service == "withdrawal":
-    withdrawal = float(input("Enter amount you want to withdraw"))
+    available_funds = account["balance"]
+    withdrawal = float(input("Enter amount you want to withdraw: "))
     account["balance"] -= withdrawal
     account["last transaction"] = f"withrawal of ${withdrawal:,.2f}"
-    print(f"Amount withdrawn is: ${withdrawal:,.2f} and your balance is: ${account['balance']:,.2f}")
-    
+    print(f"Available funds: ${available_funds:,.2f} and amount withdrawn is: ${withdrawal:,.2f} and your balance is: ${account['balance']:,.2f}")
+    if withdrawal > account["balance"]:
+        print("Insufficient funds. Withdrawal cancelled.")
         
     
 
