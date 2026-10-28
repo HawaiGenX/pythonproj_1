@@ -19,7 +19,7 @@ elif service == "withdrawal":
     withdrawal = float(input("Enter amount you want to withdraw: "))
     if withdrawal <= account["balance"]:
         account["balance"] -= withdrawal
-        account["last transaction"] = f"withrawal of ${withdrawal:,.2f}"
+        account["last transaction"] = f"withdrawal of ${withdrawal:,.2f}"
         print(f"Available funds: ${available_funds:,.2f} and amount withdrawn is: ${withdrawal:,.2f} and your balance is: ${account['balance']:,.2f}")
     else:
         print("Insufficient funds. Withdrawal cancelled.")
